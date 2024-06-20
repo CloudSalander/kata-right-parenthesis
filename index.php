@@ -10,7 +10,7 @@ function validate_expression(string $expression): bool {
     return $open_parenthesis_counter == $close_parenthesis_counter;
 }
 
-
+/*
 $expression = readline("Please, introduce mathematic expression:");
 if(validate_expression($expression)) {
     echo "Correcte".PHP_EOL;
@@ -18,5 +18,7 @@ if(validate_expression($expression)) {
 else {
     echo "Incorrecte".PHP_EOL;
 }
+*/
+echo ))3 + 3 - (1 + 4)((;
 
 ?>
