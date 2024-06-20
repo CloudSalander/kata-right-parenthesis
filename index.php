@@ -1,7 +1,13 @@
 <?php
 
 function validate_expression(string $expression): bool {
-    return false;
+    $open_parenthesis_counter = $close_parenthesis_counter = 0;
+    for($i = 0; $i < strlen($expression); ++$i) {
+        if($expression[$i] === "(") ++$open_parenthesis_counter;
+        //Pregunta abierta: Porque no otro if aquí?
+        else if($expression[$i] === ")") ++$close_parenthesis_counter;
+    }
+    return $open_parenthesis_counter == $close_parenthesis_counter;
 }
 
 
@@ -10,7 +16,7 @@ if(validate_expression($expression)) {
     echo "Correcte".PHP_EOL;
 }
 else {
-    echo "No és correcte".PHP_EOL;
+    echo "Incorrecte".PHP_EOL;
 }
 
 ?>
